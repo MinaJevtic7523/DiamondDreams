@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamond Dreams | Jewelry and watches</title>
+<meta name="description" content="Diamond Dreams is a fictional jewelry store: watches, necklaces, bracelets, rings and earrings. A web design project by Mina Jevtić.">
+<meta name="author" content="Mina Jevtić">
+<link rel="icon" href="slike/icon.png" type="image/png">
+<link rel="stylesheet" href="html/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Diamond <span>Dreams</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav id="nav" aria-label="Main"><ul><li><a href="index.html" aria-current="page">Explore</a></li><li><a href="html/gallery.html">Shop</a></li><li><a href="html/about.html">About</a></li><li><a href="html/contact.html">Contact</a></li></ul></nav>
+    <a class="cart-link" href="html/gallery.html" aria-label="Cart, items">Cart <b id="cartCount">0</b></a>
+  </div>
+</header>
+<main id="main">
+<section class="hero">
+  <div class="hero-text">
+    <p class="kicker light">Welcome to Diamond Dreams</p>
+    <h1>Let your dreams sparkle</h1>
+    <p>Explore our collection of jewelry and watches, chosen for everyday elegance.</p>
+    <a class="btn" href="html/gallery.html">Shop the collection</a>
+  </div>
+</section>
+<section class="wrap section">
+  <h2 class="title">Our collections</h2>
+  <div class="tiles"><article class="tile"><img src="slike/watch1.jpeg" alt="Gold chain-strap watch" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Watches</p><h3>Gold Illumina</h3><p>Classic and modern watches that blend style, precision and everyday function.</p><a class="link" href="html/gallery.html">Shop watches</a></div></article><article class="tile"><img src="slike/narukvice.jpg" alt="Stack of gold bracelets" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Bracelets</p><h3>Golden Grace</h3><p>From sleek minimalist chains to statement pieces made to adorn your wrist.</p><a class="link" href="html/gallery.html">Shop bracelets</a></div></article><article class="tile"><img src="slike/neckl.jpg" alt="Layered gold necklaces" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Necklaces</p><h3>Radiant Gems</h3><p>Delicate chains and bold pendants for every occasion and personal taste.</p><a class="link" href="html/gallery.html">Shop necklaces</a></div></article><article class="tile"><img src="slike/Kore%20Ring.jpeg" alt="Gold ring with small stones" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Rings</p><h3>Timeless Bands</h3><p>Rings that symbolize love, commitment and personal style.</p><a class="link" href="html/gallery.html">Shop rings</a></div></article><article class="tile"><img src="slike/zlato.jpg" alt="Rings and studs in a jewelry tray" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Piercings</p><h3>Adorned Adornments</h3><p>Studs and hoops in a range of designs, made for comfort and durability.</p><a class="link" href="html/gallery.html">Shop piercings</a></div></article><article class="tile"><img src="slike/earings.jpeg" alt="Gold earrings on an ear" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Earrings</p><h3>Whispering Gems</h3><p>Sterling silver, gold and gemstones that add sophistication to any outfit.</p><a class="link" href="html/gallery.html">Shop earrings</a></div></article></div>
+</section>
+<section class="section tint">
+  <div class="wrap">
+    <h2 class="title">Featured watches</h2>
+    <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="Featured watches">
+      <figure class="slide active"><img src="slike/watch4.jpeg" alt="Green dial square watch" width="736" height="736"></figure><figure class="slide"><img src="slike/watch3.jpeg" alt="Gold mesh square watch" width="736" height="736"></figure><figure class="slide"><img src="slike/watch5.jpeg" alt="Gold watch with pink dial" width="736" height="736"></figure>
+      <button class="c-btn prev" aria-label="Previous slide">&#8249;</button>
+      <button class="c-btn next" aria-label="Next slide">&#8250;</button>
+      <div class="dots" id="dots"></div>
+    </div>
+  </div>
+</section>
+<section class="wrap section narrow">
+  <h2 class="title">Newsletter</h2>
+  <p class="lead">Get news about new collections. This is a demo, nothing is sent or stored.</p>
+  <form class="news" id="newsForm" novalidate>
+    <label class="sr" for="newsEmail">Email address</label>
+    <input type="email" id="newsEmail" placeholder="Your email address" autocomplete="email">
+    <button class="btn" type="submit">Subscribe</button>
+    <p class="msg" id="newsMsg" role="status"></p>
+  </form>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div><p class="brand">Diamond <span>Dreams</span></p><p>Jewelry and watches for every occasion. This is a fictional store made as a web design project.</p></div>
+    <div><h3>Menu</h3><ul><li><a href="index.html">Explore</a></li><li><a href="html/gallery.html">Shop</a></li><li><a href="html/about.html">About</a></li><li><a href="html/contact.html">Contact</a></li></ul></div>
+    <div><h3>Contact</h3><p><a href="mailto:jevticm319@gmail.com">jevticm319@gmail.com</a></p><p>Belgrade, Serbia</p></div>
+  </div>
+  <p class="copy">&copy; 2026 Diamond Dreams &middot; Design project by Mina Jevtić</p>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="main.js"></script>
+</body>
+</html>
