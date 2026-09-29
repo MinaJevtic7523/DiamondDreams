@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Diamond Dreams</title>
+<meta name="description" content="Contact Diamond Dreams, a fictional jewelry store and web design project.">
+<meta name="author" content="Mina Jevtić">
+<link rel="icon" href="../slike/icon.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="../index.html">Diamond <span>Dreams</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav id="nav" aria-label="Main"><ul><li><a href="../index.html">Explore</a></li><li><a href="gallery.html">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav>
+    <a class="cart-link" href="gallery.html" aria-label="Cart, items">Cart <b id="cartCount">0</b></a>
+  </div>
+</header>
+<main id="main">
+<section class="wrap section narrow">
+  <h1 class="title">Contact</h1>
+  <p class="lead">Questions about the project or a message for me? Fill in the form and your email app will open with the message ready to send.</p>
+  <form class="form" id="contactForm" novalidate>
+    <div class="field"><label for="cname">Full name</label><input id="cname" type="text" autocomplete="name" required></div>
+    <div class="field"><label for="cemail">Email</label><input id="cemail" type="email" autocomplete="email" required></div>
+    <div class="field"><label for="csubject">Subject</label>
+      <select id="csubject" required><option value="">Choose a subject</option><option>Question about a product</option><option>Custom order</option><option>Feedback about the website</option></select></div>
+    <div class="field"><label for="cmessage">Message</label><textarea id="cmessage" rows="5" required></textarea></div>
+    <p class="msg" id="formMsg" role="status"></p>
+    <button class="btn" type="submit">Send message</button>
+  </form>
+  <p class="small center">Diamond Dreams is a fictional store. Messages go to the email of the site's author.</p>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div><p class="brand">Diamond <span>Dreams</span></p><p>Jewelry and watches for every occasion. This is a fictional store made as a web design project.</p></div>
+    <div><h3>Menu</h3><ul><li><a href="../index.html">Explore</a></li><li><a href="gallery.html">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h3>Contact</h3><p><a href="mailto:jevticm319@gmail.com">jevticm319@gmail.com</a></p><p>Belgrade, Serbia</p></div>
+  </div>
+  <p class="copy">&copy; 2026 Diamond Dreams &middot; Design project by Mina Jevtić</p>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="../main.js"></script>
+</body>
+</html>
