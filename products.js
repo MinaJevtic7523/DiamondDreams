@@ -1,0 +1,33 @@
+// Product catalog (fictional store). img is a file name inside the slike/ folder.
+var PRODUCTS = [
+  { id: 1, name: "Luna Luxe", cat: "Watches", material: "Silver", price: 211, img: "watch7.jpeg", badge: "Best seller", desc: "A silver watch with a soft pink dial that combines sleek design with sophistication." },
+  { id: 2, name: "Regal Fusion", cat: "Watches", material: "Mixed", price: 321, img: "watch6.jpeg", desc: "A silver-gold watch with a dark dial that exudes opulence and modern elegance." },
+  { id: 3, name: "Aurora Duo", cat: "Watches", material: "Mixed", price: 350, img: "watch11.jpeg", badge: "New", desc: "A silver-gold watch with a sunlit dial that blends classic elegance with modern luxury." },
+  { id: 4, name: "Gold Illumina", cat: "Watches", material: "Gold", price: 189, img: "watch1.jpeg", badge: "Best seller", desc: "A delicate gold watch with a chain strap, made for everyday wear." },
+  { id: 5, name: "Sunrise Square", cat: "Watches", material: "Gold", price: 149, img: "watch3.jpeg", desc: "A square watch with a white dial and a fine gold mesh strap." },
+  { id: 6, name: "Emerald Mesh", cat: "Watches", material: "Gold", price: 169, img: "watch4.jpeg", desc: "A green dial set in gold, on a soft mesh strap." },
+  { id: 7, name: "Rosé Crown", cat: "Watches", material: "Gold", price: 299, img: "watch5.jpeg", desc: "A classic gold watch with a mother-of-pearl dial and a polished bracelet." },
+  { id: 8, name: "Petal Halo Ring", cat: "Rings", material: "Gold", price: 120, img: "Kore Ring.jpeg", desc: "A slim gold band with tiny stones arranged like petals." },
+  { id: 9, name: "Heart Bloom Ring", cat: "Rings", material: "Gold", price: 240, img: "heartring.jpeg", badge: "New", desc: "A heart-cut stone in a rose gold setting, a romantic statement ring." },
+  { id: 10, name: "Blush Morganite Ring", cat: "Rings", material: "Gold", price: 280, img: "pinkring.jpeg", desc: "A soft pink stone with a delicate floral setting." },
+  { id: 11, name: "Eternal Halo Set", cat: "Rings", material: "Silver", price: 260, img: "silverring.jpeg", badge: "Best seller", desc: "A halo engagement ring with a matching band, in polished silver." },
+  { id: 12, name: "Stackable Gold Rings", cat: "Rings", material: "Gold", price: 89, img: "prsten.jpg", desc: "A set of thin and textured rings made to be stacked and mixed." },
+  { id: 13, name: "Enchanted Tale Necklace", cat: "Necklaces", material: "Gold", price: 130, img: "beauty&beast.jpeg", desc: "A layered necklace with a rose pendant and the romance of a fairy tale." },
+  { id: 14, name: "Swan Lake Necklace", cat: "Necklaces", material: "Gold", price: 95, img: "swan.jpeg", desc: "A rose gold swan pendant inspired by swans gliding across a serene lake." },
+  { id: 15, name: "Lucky Charm Necklace", cat: "Necklaces", material: "Gold", price: 161, img: "necklace2.jpeg", badge: "Best seller", desc: "A clover pendant that brings luck and positivity to everyday wear." },
+  { id: 16, name: "Layered Chain Necklace", cat: "Necklaces", material: "Gold", price: 110, img: "neckl.jpg", desc: "Two gold chains of different weight with a small round pendant." },
+  { id: 17, name: "Golden Pendant Necklace", cat: "Necklaces", material: "Gold", price: 75, img: "zlato2.jpg", desc: "A fine gold chain with a small engraved pendant." },
+  { id: 18, name: "Celestial Dreams Bracelet", cat: "Bracelets", material: "Mixed", price: 45, img: "bracelet.jpeg", desc: "A stack of bangles with moon and star charms for a touch of cosmic charm." },
+  { id: 19, name: "Silver Stardust", cat: "Bracelets", material: "Silver", price: 83, img: "silver5.jpeg", desc: "A shimmering silver tennis bracelet with a sleek, sophisticated design." },
+  { id: 20, name: "Silver Heartstrings", cat: "Bracelets", material: "Silver", price: 97, img: "silver3.jpeg", badge: "New", desc: "Sterling silver with a charming heart motif, a symbol of love." },
+  { id: 21, name: "Silver Slider Bracelet", cat: "Bracelets", material: "Silver", price: 69, img: "silver.jpeg", desc: "An adjustable silver bracelet with sparkling stones." },
+  { id: 22, name: "Golden Stack Bracelets", cat: "Bracelets", material: "Gold", price: 58, img: "narukvice.jpg", desc: "Three gold bracelets in different chain styles, worn together." },
+  { id: 23, name: "Gold Paperclip Bracelet", cat: "Bracelets", material: "Gold", price: 72, img: "Necklace - Gold.jpeg", desc: "A modern paperclip chain bracelet in polished gold." },
+  { id: 24, name: "Flutter Grace", cat: "Earrings", material: "Mixed", price: 21, img: "ear.jpeg", desc: "Earrings that capture the delicate beauty of butterflies." },
+  { id: 25, name: "Golden Radiance", cat: "Earrings", material: "Gold", price: 34, img: "earing5.jpeg", desc: "Large gold hoops with timeless shine, perfect for any occasion." },
+  { id: 26, name: "Ethereal Wings", cat: "Earrings", material: "Silver", price: 60, img: "wings.jpeg", desc: "Silver wing earrings covered in tiny crystals." },
+  { id: 27, name: "Butterfly Studs", cat: "Earrings", material: "Gold", price: 29, img: "butterfly.jpeg", badge: "New", desc: "Small gold butterfly studs with sparkling stones." },
+  { id: 28, name: "Ear Stack Set", cat: "Earrings", material: "Gold", price: 49, img: "earings.jpeg", desc: "A mix of studs and hoops for building your own ear stack." },
+  { id: 29, name: "Piercing Set Gold", cat: "Earrings", material: "Gold", price: 35, img: "zlato.jpg", desc: "Studs and small hoops in hypoallergenic gold-tone metal." }
+];
+var CATEGORIES = ["Watches", "Rings", "Necklaces", "Bracelets", "Earrings"];

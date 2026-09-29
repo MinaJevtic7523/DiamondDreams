@@ -1,22 +1,24 @@
 # Diamond Dreams
 
-A multi-page website for a fictional jewelry and watch store. A web design project, built without any framework.
+A working online shop for a fictional jewelry and watch store, built with plain HTML, CSS and JavaScript (no frameworks).
 
 **Live demo:** https://minajevtic7523.github.io/DiamondDreams/
 
-## Pages
-- `index.html` – hero, collections, featured watches carousel, newsletter form
-- `html/gallery.html` – shop with 12 products, sorting by price and an "added to cart" dialog
-- `html/about.html` – about the (fictional) store and team
-- `html/contact.html` – contact form with validation
-
 ## Features
-- Responsive layout (phone, tablet, desktop) with a mobile menu
-- Accessible carousel, dialog and forms (labels, focus styles, skip link)
-- Cart counter saved in the browser (localStorage)
-- No external libraries, everything is plain HTML, CSS and JavaScript
+- Product catalog with 29 items (data in `products.js`)
+- Search, category filter, material filter, price slider and sorting
+- Wishlist (heart button) with an "only my wishlist" filter
+- Quick view window with related products
+- Shopping cart drawer: quantities, remove, free-shipping progress, promo code `DREAMS10`
+- Checkout form with validation and an order confirmation (demo, no payments)
+- Cart and wishlist saved in the browser (localStorage)
+- Contact form with validation and an FAQ
+- Responsive layout, keyboard and screen-reader friendly
+
+## Files
+`index.html`, `main.js` (shared code), `products.js` (data), `shop.js` (shop page), `html/` (shop, about and contact pages, `style.css`), `slike/` (images)
 
 ## Note
-Diamond Dreams is a fictional store. Team photos are stock images and product photos are used for demonstration only. There is no real checkout.
+Diamond Dreams is a fictional store. Team photos are stock images and product photos are used for demonstration only.
 
 Author: Mina Jevtić

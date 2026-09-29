@@ -4,65 +4,91 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diamond Dreams | Jewelry and watches</title>
-<meta name="description" content="Diamond Dreams is a fictional jewelry store: watches, necklaces, bracelets, rings and earrings. A web design project by Mina Jevtić.">
+<meta name="description" content="Diamond Dreams is a fictional jewelry store with a working shop: search, filters, wishlist, cart and checkout demo. Built by Mina Jevtić.">
 <meta name="author" content="Mina Jevtić">
 <link rel="icon" href="slike/icon.png" type="image/png">
 <link rel="stylesheet" href="html/style.css">
 </head>
-<body>
+<body data-base="">
 <a class="skip" href="#main">Skip to content</a>
+<div class="topbar">Free shipping on orders over £150 &middot; Use code <b>DREAMS10</b> for 10% off</div>
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="index.html">Diamond <span>Dreams</span></a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span><span></span></button>
-    <nav id="nav" aria-label="Main"><ul><li><a href="index.html" aria-current="page">Explore</a></li><li><a href="html/gallery.html">Shop</a></li><li><a href="html/about.html">About</a></li><li><a href="html/contact.html">Contact</a></li></ul></nav>
-    <a class="cart-link" href="html/gallery.html" aria-label="Cart, items">Cart <b id="cartCount">0</b></a>
+    <a class="brand" href="index.html">Diamond <span>Dreams</span></a>
+    <nav id="nav" aria-label="Main"><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="html/gallery.html">Shop</a></li><li><a href="html/about.html">About</a></li><li><a href="html/contact.html">Contact</a></li></ul></nav>
+    <div class="tools">
+      <button class="icon-btn" type="button" data-open="wish" aria-label="Open wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.500-4.600-9.500-9.200C1.200 8.600 3 5.500 6.200 5.500c1.900 0 3.200 1 3.800 2.200.600-1.200 1.900-2.200 3.800-2.200 3.200 0 5 3.100 3.700 6.300C19.500 16.400 12 21 12 21z"/></svg><b data-wish-count hidden>0</b></button>
+      <button class="icon-btn" type="button" data-open="cart" aria-label="Open cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><b data-cart-count hidden>0</b></button>
+    </div>
   </div>
 </header>
 <main id="main">
-<section class="hero">
-  <div class="hero-text">
-    <p class="kicker light">Welcome to Diamond Dreams</p>
-    <h1>Let your dreams sparkle</h1>
-    <p>Explore our collection of jewelry and watches, chosen for everyday elegance.</p>
-    <a class="btn" href="html/gallery.html">Shop the collection</a>
-  </div>
+<section class="hero"><div class="hero-text"><p class="kicker light">New season collection</p><h1>Jewelry that tells your story</h1><p>Watches, rings, necklaces, bracelets and earrings, chosen for everyday elegance.</p><div class="hero-btns"><a class="btn" href="html/gallery.html">Shop the collection</a><a class="btn ghost light" href="html/gallery.html?cat=Watches">See watches</a></div></div></section>
+<section class="perks wrap"><div><b>Free shipping</b><span>on orders over £150</span></div><div><b>30-day returns</b><span>easy and free</span></div><div><b>Gift wrapping</b><span>on every order</span></div><div><b>Secure checkout</b><span>demo, nothing is charged</span></div></section>
+<section class="wrap section"><h2 class="title">Shop by category</h2><div class="cats"><a class="cat" href="html/gallery.html?cat=Watches"><img src="slike/watch1.jpeg" alt="" width="300" height="380" loading="lazy"><span>Watches</span></a><a class="cat" href="html/gallery.html?cat=Rings"><img src="slike/Kore%20Ring.jpeg" alt="" width="300" height="380" loading="lazy"><span>Rings</span></a><a class="cat" href="html/gallery.html?cat=Necklaces"><img src="slike/neckl.jpg" alt="" width="300" height="380" loading="lazy"><span>Necklaces</span></a><a class="cat" href="html/gallery.html?cat=Bracelets"><img src="slike/narukvice.jpg" alt="" width="300" height="380" loading="lazy"><span>Bracelets</span></a><a class="cat" href="html/gallery.html?cat=Earrings"><img src="slike/earings.jpeg" alt="" width="300" height="380" loading="lazy"><span>Earrings</span></a></div></section>
+<section class="section tint"><div class="wrap"><h2 class="title">Best sellers and new arrivals</h2><div class="tiles four" id="featured"></div><p class="center"><a class="btn ghost" href="html/gallery.html">View all products</a></p></div></section>
+<section class="wrap section"><h2 class="title">Featured watches</h2>
+  <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="Featured watches"><figure class="slide"><img src="slike/watch4.jpeg" alt="Emerald Mesh watch" width="736" height="736"></figure><figure class="slide"><img src="slike/watch3.jpeg" alt="Sunrise Square watch" width="736" height="736"></figure><figure class="slide"><img src="slike/watch5.jpeg" alt="Rosé Crown watch" width="736" height="736"></figure><button class="c-btn prev" type="button" aria-label="Previous slide">&#8249;</button><button class="c-btn next" type="button" aria-label="Next slide">&#8250;</button><div class="dots" id="dots"></div></div>
 </section>
-<section class="wrap section">
-  <h2 class="title">Our collections</h2>
-  <div class="tiles"><article class="tile"><img src="slike/watch1.jpeg" alt="Gold chain-strap watch" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Watches</p><h3>Gold Illumina</h3><p>Classic and modern watches that blend style, precision and everyday function.</p><a class="link" href="html/gallery.html">Shop watches</a></div></article><article class="tile"><img src="slike/narukvice.jpg" alt="Stack of gold bracelets" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Bracelets</p><h3>Golden Grace</h3><p>From sleek minimalist chains to statement pieces made to adorn your wrist.</p><a class="link" href="html/gallery.html">Shop bracelets</a></div></article><article class="tile"><img src="slike/neckl.jpg" alt="Layered gold necklaces" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Necklaces</p><h3>Radiant Gems</h3><p>Delicate chains and bold pendants for every occasion and personal taste.</p><a class="link" href="html/gallery.html">Shop necklaces</a></div></article><article class="tile"><img src="slike/Kore%20Ring.jpeg" alt="Gold ring with small stones" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Rings</p><h3>Timeless Bands</h3><p>Rings that symbolize love, commitment and personal style.</p><a class="link" href="html/gallery.html">Shop rings</a></div></article><article class="tile"><img src="slike/zlato.jpg" alt="Rings and studs in a jewelry tray" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Piercings</p><h3>Adorned Adornments</h3><p>Studs and hoops in a range of designs, made for comfort and durability.</p><a class="link" href="html/gallery.html">Shop piercings</a></div></article><article class="tile"><img src="slike/earings.jpeg" alt="Gold earrings on an ear" width="368" height="368" loading="lazy"><div class="tile-body"><p class="kicker">Earrings</p><h3>Whispering Gems</h3><p>Sterling silver, gold and gemstones that add sophistication to any outfit.</p><a class="link" href="html/gallery.html">Shop earrings</a></div></article></div>
-</section>
-<section class="section tint">
-  <div class="wrap">
-    <h2 class="title">Featured watches</h2>
-    <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="Featured watches">
-      <figure class="slide active"><img src="slike/watch4.jpeg" alt="Green dial square watch" width="736" height="736"></figure><figure class="slide"><img src="slike/watch3.jpeg" alt="Gold mesh square watch" width="736" height="736"></figure><figure class="slide"><img src="slike/watch5.jpeg" alt="Gold watch with pink dial" width="736" height="736"></figure>
-      <button class="c-btn prev" aria-label="Previous slide">&#8249;</button>
-      <button class="c-btn next" aria-label="Next slide">&#8250;</button>
-      <div class="dots" id="dots"></div>
-    </div>
-  </div>
-</section>
-<section class="wrap section narrow">
-  <h2 class="title">Newsletter</h2>
-  <p class="lead">Get news about new collections. This is a demo, nothing is sent or stored.</p>
-  <form class="news" id="newsForm" novalidate>
-    <label class="sr" for="newsEmail">Email address</label>
-    <input type="email" id="newsEmail" placeholder="Your email address" autocomplete="email">
-    <button class="btn" type="submit">Subscribe</button>
-    <p class="msg" id="newsMsg" role="status"></p>
-  </form>
-</section>
+<section class="news-band"><div class="wrap narrow"><h2 class="title light">Get 10% off your first order</h2><p class="lead light">Join the newsletter for new collections and offers. This is a demo, your email is not stored.</p>
+  <form class="news" id="newsForm" novalidate><label class="sr" for="newsEmail">Email address</label><input type="email" id="newsEmail" placeholder="Your email address" autocomplete="email"><button class="btn" type="submit">Subscribe</button><p class="msg light" id="newsMsg" role="status"></p></form></div></section>
 </main>
 <footer class="site-footer">
   <div class="wrap foot">
-    <div><p class="brand">Diamond <span>Dreams</span></p><p>Jewelry and watches for every occasion. This is a fictional store made as a web design project.</p></div>
-    <div><h3>Menu</h3><ul><li><a href="index.html">Explore</a></li><li><a href="html/gallery.html">Shop</a></li><li><a href="html/about.html">About</a></li><li><a href="html/contact.html">Contact</a></li></ul></div>
+    <div><p class="brand">Diamond <span>Dreams</span></p><p>Jewelry and watches for every occasion. This is a fictional store made as a web development project.</p></div>
+    <div><h3>Shop</h3><ul><li><a href="html/gallery.html?cat=Watches">Watches</a></li><li><a href="html/gallery.html?cat=Rings">Rings</a></li><li><a href="html/gallery.html?cat=Necklaces">Necklaces</a></li><li><a href="html/gallery.html?cat=Bracelets">Bracelets</a></li><li><a href="html/gallery.html?cat=Earrings">Earrings</a></li></ul></div>
+    <div><h3>Menu</h3><ul><li><a href="index.html">Home</a></li><li><a href="html/gallery.html">Shop</a></li><li><a href="html/about.html">About</a></li><li><a href="html/contact.html">Contact</a></li></ul></div>
     <div><h3>Contact</h3><p><a href="mailto:jevticm319@gmail.com">jevticm319@gmail.com</a></p><p>Belgrade, Serbia</p></div>
   </div>
-  <p class="copy">&copy; 2026 Diamond Dreams &middot; Design project by Mina Jevtić</p>
+  <p class="copy">&copy; 2026 Diamond Dreams &middot; Web development project by Mina Jevtić</p>
 </footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Cart and wishlist" aria-hidden="true">
+  <div class="d-head">
+    <div class="d-tabs" role="tablist"><button class="d-tab on" role="tab" type="button" data-tab="cart" aria-selected="true">Cart <b data-cart-count hidden>0</b></button><button class="d-tab" role="tab" type="button" data-tab="wish" aria-selected="false">Wishlist <b data-wish-count hidden>0</b></button></div>
+    <button class="icon-btn dark" id="drawerClose" type="button" aria-label="Close">&times;</button>
+  </div>
+  <div class="d-body" id="drawerBody"></div>
+  <div class="d-foot" id="drawerFoot"></div>
+</aside>
+
+<dialog id="quickView" class="modal" aria-labelledby="qvName">
+  <button class="x" type="button" data-close-dialog aria-label="Close">&times;</button>
+  <div class="qv">
+    <img id="qvImg" src="" alt="" width="420" height="420">
+    <div>
+      <p class="kicker" id="qvCat"></p><h2 id="qvName"></h2><p class="price big" id="qvPrice"></p><p id="qvDesc"></p>
+      <div class="qv-row"><label for="qvQty">Quantity</label><input id="qvQty" type="number" min="1" max="10" value="1"></div>
+      <div class="qv-row"><button class="btn" type="button" id="qvAdd">Add to cart</button><button class="btn ghost" type="button" id="qvWish" aria-pressed="false">♡ Save</button></div>
+      <p class="small">More like this</p><div class="rel" id="qvRel"></div>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="checkoutDialog" class="modal narrow-modal" aria-labelledby="coTitle">
+  <button class="x" type="button" data-close-dialog aria-label="Close">&times;</button>
+  <form id="coForm" novalidate>
+    <h2 id="coTitle">Checkout</h2><p class="small" id="coSummary"></p>
+    <p class="demo">Demo store: nothing is charged and no payment details are collected.</p>
+    <div class="field"><label for="coName">Full name</label><input id="coName" autocomplete="name"></div>
+    <div class="field"><label for="coEmail">Email</label><input id="coEmail" type="email" autocomplete="email"></div>
+    <div class="field"><label for="coAddress">Address</label><input id="coAddress" autocomplete="street-address"></div>
+    <div class="two"><div class="field"><label for="coCity">City</label><input id="coCity" autocomplete="address-level2"></div><div class="field"><label for="coZip">Postal code</label><input id="coZip" autocomplete="postal-code"></div></div>
+    <p class="msg" id="coMsg" role="status"></p>
+    <button class="btn wide" type="submit">Place order</button>
+  </form>
+  <div id="coDone" hidden>
+    <h2>Thank you for your order!</h2>
+    <p>Order number: <strong id="coOrderNo"></strong></p>
+    <p>A confirmation for <strong id="coDoneTotal"></strong> would be sent to <strong id="coDoneEmail"></strong>.</p>
+    <p class="demo">This was a demo order, so nothing was really bought.</p>
+    <button class="btn" type="button" data-close-dialog>Close</button>
+  </div>
+</dialog>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="products.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
