@@ -4,47 +4,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shop | Diamond Dreams</title>
-<meta name="description" content="Shop watches, earrings, necklaces and bracelets at Diamond Dreams, a fictional jewelry store.">
+<meta name="description" content="Shop watches, rings, necklaces, bracelets and earrings at Diamond Dreams, a fictional jewelry store.">
 <meta name="author" content="Mina Jevtić">
 <link rel="icon" href="../slike/icon.png" type="image/png">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-base="../">
 <a class="skip" href="#main">Skip to content</a>
+<div class="topbar">Free shipping on orders over £150 &middot; Use code <b>DREAMS10</b> for 10% off</div>
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="../index.html">Diamond <span>Dreams</span></a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><span></span><span></span><span></span></button>
-    <nav id="nav" aria-label="Main"><ul><li><a href="../index.html">Explore</a></li><li><a href="gallery.html" aria-current="page">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
-    <a class="cart-link" href="gallery.html" aria-label="Cart, items">Cart <b id="cartCount">0</b></a>
+    <a class="brand" href="../index.html">Diamond <span>Dreams</span></a>
+    <nav id="nav" aria-label="Main"><ul><li><a href="../index.html">Home</a></li><li><a href="gallery.html" aria-current="page">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+    <div class="tools">
+      <button class="icon-btn" type="button" data-open="wish" aria-label="Open wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.500-4.600-9.500-9.200C1.200 8.600 3 5.500 6.200 5.500c1.900 0 3.200 1 3.800 2.200.600-1.200 1.900-2.200 3.800-2.200 3.200 0 5 3.100 3.700 6.300C19.500 16.400 12 21 12 21z"/></svg><b data-wish-count hidden>0</b></button>
+      <button class="icon-btn" type="button" data-open="cart" aria-label="Open cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg><b data-cart-count hidden>0</b></button>
+    </div>
   </div>
 </header>
 <main id="main">
-<section class="wrap section">
-  <h1 class="title">Shop</h1>
-  <p class="lead">Watches, earrings, necklaces and bracelets. This is a demo shop: nothing is really sold.</p>
-  <div class="filters" role="group" aria-label="Sort products">
-    <label for="sort">Sort by</label>
-    <select id="sort"><option value="default">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select>
+<section class="page-head"><div class="wrap"><h1>Shop</h1><p>29 pieces of jewelry and watches. Search, filter and save your favorites.</p></div></section>
+<section class="wrap section shop">
+  <div class="toolbar">
+    <div class="field grow"><label for="search">Search</label><input id="search" type="search" placeholder="Try &quot;heart&quot; or &quot;gold&quot;" autocomplete="off"></div>
+    <div class="field"><label for="material">Material</label><select id="material"><option>All</option><option>Gold</option><option>Silver</option><option>Mixed</option></select></div>
+    <div class="field"><label for="sort">Sort by</label><select id="sort"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name A-Z</option></select></div>
+    <div class="field range"><label for="priceRange">Max price: <b id="priceVal"></b></label><input id="priceRange" type="range" min="0" max="400" step="5" value="400"></div>
   </div>
-  <div class="tiles" id="products"><article class="product" data-name="Luna Luxe" data-price="211"><img src="../slike/watch7.jpeg" alt="Silver watch with pink dial" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Luna Luxe</h3><p>A silver watch that combines sleek design with sophistication.</p><p class="price">&pound;211</p><button class="btn small add" type="button">Add to cart</button></div></article><article class="product" data-name="Regal Fusion" data-price="321"><img src="../slike/watch6.jpeg" alt="Silver and gold watch with dark dial" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Regal Fusion</h3><p>A silver-gold watch with opulence and modern elegance.</p><p class="price">&pound;321</p><button class="btn small add" type="button">Add to cart</button></div></article><article class="product" data-name="Aurora Duo" data-price="350"><img src="../slike/watch11.jpeg" alt="Silver and gold watch with gold dial" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Aurora Duo</h3><p>A silver-gold watch that blends classic elegance with modern luxury.</p><p class="price">&pound;350</p><button class="btn small add" type="button">Add to cart</button></div></article><article class="product" data-name="Flutter Grace" data-price="21"><img src="../slike/ear.jpeg" alt="Butterfly earrings" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Flutter Grace</h3><p>Earrings that capture the delicate beauty of butterflies.</p><p class="price">&pound;21</p><button class="btn small add" type="button">Add to cart</button></div></article><article class="product" data-name="Golden Radiance" data-price="10"><img src="../slike/earing5.jpeg" alt="Large gold hoop earrings" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Golden Radiance</h3><p>Gold hoop earrings with timeless shine, perfect for any occasion.</p><p class="price">&pound;10</p><button class="btn small add" type="button">Add to cart</button></div></article><article class="product" data-name="Ethereal Wings" data-price="60"><img src="../slike/wings.jpeg" alt="Silver wing earrings with crystals" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Ethereal Wings</h3><p>Earrings inspired by the grace of delicate wings.</p><p class="price">&pound;60</p><button class="btn small add" type="button">Add to cart</button></div></article><article class="product" data-name="Enchanted Tale Necklace" data-price="130"><img src="../slike/beauty%26beast.jpeg" alt="Gold layered necklace with rose pendant" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Enchanted Tale Necklace</h3><p>A layered necklace with the romance of a fairy tale.</p><p class="price">&pound;130</p><button class="btn small add" type="button">Add to cart</button></div></article><article class="product" data-name="Swan Lake Necklace" data-price="95"><img src="../slike/swan.jpeg" alt="Rose gold swan pendant necklace" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Swan Lake Necklace</h3><p>A pendant inspired by swans gliding across a serene lake.</p><p class="price">&pound;95</p><button class="btn small add" type="button">Add to cart</button></div></article><article class="product" data-name="Lucky Charm Necklace" data-price="161"><img src="../slike/necklace2.jpeg" alt="Gold necklace with clover pendant" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Lucky Charm Necklace</h3><p>A clover pendant that brings luck and positivity to everyday wear.</p><p class="price">&pound;161</p><button class="btn small add" type="button">Add to cart</button></div></article><article class="product" data-name="Celestial Dreams Bracelet" data-price="45"><img src="../slike/bracelet.jpeg" alt="Gold and crystal bangle bracelet" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Celestial Dreams Bracelet</h3><p>A bracelet with moon and star charms for a touch of cosmic charm.</p><p class="price">&pound;45</p><button class="btn small add" type="button">Add to cart</button></div></article><article class="product" data-name="Silver Stardust" data-price="83"><img src="../slike/silver5.jpeg" alt="Silver tennis bracelet" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Silver Stardust</h3><p>A shimmering silver bracelet with a sleek, sophisticated design.</p><p class="price">&pound;83</p><button class="btn small add" type="button">Add to cart</button></div></article><article class="product" data-name="Silver Heartstrings" data-price="97"><img src="../slike/silver3.jpeg" alt="Silver bracelet with heart" width="368" height="368" loading="lazy"><div class="tile-body"><h3>Silver Heartstrings</h3><p>Sterling silver with a charming heart motif, a symbol of love.</p><p class="price">&pound;97</p><button class="btn small add" type="button">Add to cart</button></div></article></div>
+  <div class="chips" id="chips" role="group" aria-label="Category"></div>
+  <div class="result-row"><p id="resultCount" role="status" aria-live="polite"></p><label class="check"><input type="checkbox" id="favOnly"> Only my wishlist</label><button class="link-btn" id="reset" type="button">Reset filters</button></div>
+  <div class="tiles four" id="products"></div>
+  <div class="empty big-empty" id="noResults" hidden><p>No products match your filters.</p><button class="btn" id="reset2" type="button">Reset filters</button></div>
 </section>
-<dialog id="cartDialog" aria-labelledby="dlgTitle">
-  <h2 id="dlgTitle">Added to cart</h2>
-  <p id="dlgText"></p>
-  <p class="small">Checkout is not available because this is a demo store.</p>
-  <form method="dialog"><button class="btn" value="ok">Continue shopping</button></form>
-</dialog>
 </main>
 <footer class="site-footer">
   <div class="wrap foot">
-    <div><p class="brand">Diamond <span>Dreams</span></p><p>Jewelry and watches for every occasion. This is a fictional store made as a web design project.</p></div>
-    <div><h3>Menu</h3><ul><li><a href="../index.html">Explore</a></li><li><a href="gallery.html">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><p class="brand">Diamond <span>Dreams</span></p><p>Jewelry and watches for every occasion. This is a fictional store made as a web development project.</p></div>
+    <div><h3>Shop</h3><ul><li><a href="gallery.html?cat=Watches">Watches</a></li><li><a href="gallery.html?cat=Rings">Rings</a></li><li><a href="gallery.html?cat=Necklaces">Necklaces</a></li><li><a href="gallery.html?cat=Bracelets">Bracelets</a></li><li><a href="gallery.html?cat=Earrings">Earrings</a></li></ul></div>
+    <div><h3>Menu</h3><ul><li><a href="../index.html">Home</a></li><li><a href="gallery.html">Shop</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div><h3>Contact</h3><p><a href="mailto:jevticm319@gmail.com">jevticm319@gmail.com</a></p><p>Belgrade, Serbia</p></div>
   </div>
-  <p class="copy">&copy; 2026 Diamond Dreams &middot; Design project by Mina Jevtić</p>
+  <p class="copy">&copy; 2026 Diamond Dreams &middot; Web development project by Mina Jevtić</p>
 </footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Cart and wishlist" aria-hidden="true">
+  <div class="d-head">
+    <div class="d-tabs" role="tablist"><button class="d-tab on" role="tab" type="button" data-tab="cart" aria-selected="true">Cart <b data-cart-count hidden>0</b></button><button class="d-tab" role="tab" type="button" data-tab="wish" aria-selected="false">Wishlist <b data-wish-count hidden>0</b></button></div>
+    <button class="icon-btn dark" id="drawerClose" type="button" aria-label="Close">&times;</button>
+  </div>
+  <div class="d-body" id="drawerBody"></div>
+  <div class="d-foot" id="drawerFoot"></div>
+</aside>
+
+<dialog id="quickView" class="modal" aria-labelledby="qvName">
+  <button class="x" type="button" data-close-dialog aria-label="Close">&times;</button>
+  <div class="qv">
+    <img id="qvImg" src="" alt="" width="420" height="420">
+    <div>
+      <p class="kicker" id="qvCat"></p><h2 id="qvName"></h2><p class="price big" id="qvPrice"></p><p id="qvDesc"></p>
+      <div class="qv-row"><label for="qvQty">Quantity</label><input id="qvQty" type="number" min="1" max="10" value="1"></div>
+      <div class="qv-row"><button class="btn" type="button" id="qvAdd">Add to cart</button><button class="btn ghost" type="button" id="qvWish" aria-pressed="false">♡ Save</button></div>
+      <p class="small">More like this</p><div class="rel" id="qvRel"></div>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="checkoutDialog" class="modal narrow-modal" aria-labelledby="coTitle">
+  <button class="x" type="button" data-close-dialog aria-label="Close">&times;</button>
+  <form id="coForm" novalidate>
+    <h2 id="coTitle">Checkout</h2><p class="small" id="coSummary"></p>
+    <p class="demo">Demo store: nothing is charged and no payment details are collected.</p>
+    <div class="field"><label for="coName">Full name</label><input id="coName" autocomplete="name"></div>
+    <div class="field"><label for="coEmail">Email</label><input id="coEmail" type="email" autocomplete="email"></div>
+    <div class="field"><label for="coAddress">Address</label><input id="coAddress" autocomplete="street-address"></div>
+    <div class="two"><div class="field"><label for="coCity">City</label><input id="coCity" autocomplete="address-level2"></div><div class="field"><label for="coZip">Postal code</label><input id="coZip" autocomplete="postal-code"></div></div>
+    <p class="msg" id="coMsg" role="status"></p>
+    <button class="btn wide" type="submit">Place order</button>
+  </form>
+  <div id="coDone" hidden>
+    <h2>Thank you for your order!</h2>
+    <p>Order number: <strong id="coOrderNo"></strong></p>
+    <p>A confirmation for <strong id="coDoneTotal"></strong> would be sent to <strong id="coDoneEmail"></strong>.</p>
+    <p class="demo">This was a demo order, so nothing was really bought.</p>
+    <button class="btn" type="button" data-close-dialog>Close</button>
+  </div>
+</dialog>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="../products.js"></script>
 <script src="../main.js"></script>
+<script src="../shop.js"></script>
 </body>
 </html>
